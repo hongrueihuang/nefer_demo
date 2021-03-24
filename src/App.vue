@@ -1,30 +1,37 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+<Navbar />
+<Banner />
+<Business />
+<Service />
+<Cloud />
+<Tech />
+<Info />
+<Footer />
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+import Navbar from './components/layout/Navbar'
+import Banner from './components/home/Banner'
+import Business from './components/home/Business'
+import Service from './components/home/Service'
+import Cloud from './components/home/Cloud'
+import Tech from './components/home/Tech'
+import Info from './components/home/Info'
+import Footer from './components/layout/Footer'
+export default {
+  components: {
+    Navbar,
+    Banner,
+    Business,
+    Service,
+    Cloud,
+    Tech,
+    Info,
+    Footer
   }
 }
+</script>
+
+<style lang="scss">
+@import './assets/all.scss';
 </style>
